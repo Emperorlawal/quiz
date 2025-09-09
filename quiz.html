@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>21st Emperor Global IQ Test</title>
+  <link rel="stylesheet" href="quiz.css" />
+  <!-- jsPDF for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- QRCode.js for QR code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Start Page -->
+    <section id="start-page">
+      <h1>🧠 21st Emperor Global IQ Quiz</h1>
+      <input type="text" id="username" placeholder="Enter your name" />
+      <button onclick="startQuiz()">Start Quiz</button>
+    </section>
+
+    <!-- Quiz Page -->
+    <section id="quiz-page" class="hidden">
+      <div class="header">
+        <div id="timer">03:00</div>
+        <div id="progress-bar"><div id="progress"></div></div>
+      </div>
+      <form id="quiz-form"></form>
+      <button onclick="submitQuiz()">Submit</button>
+    </section>
+
+    <!-- Result Page -->
+    <section id="result-page" class="hidden">
+      <h2>🎉 Quiz Completed</h2>
+      <p id="result-summary"></p>
+      <button onclick="downloadPDF()">Download Certificate</button>
+      <a id="whatsapp-share" target="_blank">Share on WhatsApp</a>
+    </section>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
